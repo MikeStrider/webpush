@@ -1,5 +1,6 @@
 git add .
-git commit -m "push to git, number 2"
+git commit -m "push to git, number 3"
+git pull origin new_branch
 git push origin new_branch
 
 
