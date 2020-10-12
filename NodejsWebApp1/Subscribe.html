@@ -47,7 +47,7 @@
                     console.log(this.responseText);
                 }
             });
-            xhr.open("POST", "https://ec2-3-137-148-110.us-east-2.compute.amazonaws.com:3000/SaveURL");
+            xhr.open("POST", "http://ec2-3-137-148-110.us-east-2.compute.amazonaws.com:3000/SaveURL");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(data);
 
