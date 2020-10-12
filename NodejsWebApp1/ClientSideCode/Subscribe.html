@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <button onclick="subscribe()">Subscribe</button>
+
+    <script>
+        addEventListener('load', async () => {
+            let sw = await navigator.serviceWorker.register('./sw.js')
+            console.log(sw)
+        })
+
+        async function subscribe() {
+            let sw = await navigator.serviceWorker.ready;
+            let push = await sw.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: 'BOfFv9TlbYfetZ7Cd160G29UH6BUpkfweiZO-ySNtQodj-1qO59QenvY81xEnh_MepqtzK9nVrm5LQLXGnhMgR4'
+            });
+            console.log(JSON.stringify(push));
+            // store the push string in the DB attached to the user ID
+
+        }
+    </script>
+
+</body>
+</html>
