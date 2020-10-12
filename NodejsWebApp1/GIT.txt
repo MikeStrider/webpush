@@ -1,0 +1,9 @@
+git add .
+git commit -m "push to git, number 2"
+git push origin new_branch
+
+
+cd C:\Program Files (x86)\Google\Chrome\Application
+chrome.exe --user-data-dir=c:\dir --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost/
+
+cd C:\Users\mstrong\Documents\Test Projects\NodejsWebApp1\NodejsWebApp1

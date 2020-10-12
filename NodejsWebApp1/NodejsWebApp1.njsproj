@@ -29,13 +29,22 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="ClientSideCode\Subscribe.html" />
+    <Content Include="ClientSideCode\sw.js" />
+    <Content Include="GIT.txt">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Json.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="push.js" />
+    <Content Include="PushNotificationLocations.png" />
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientSideCode\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
