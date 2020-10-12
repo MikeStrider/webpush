@@ -18,16 +18,21 @@
                 userVisibleOnly: true,
                 applicationServerKey: 'BOfFv9TlbYfetZ7Cd160G29UH6BUpkfweiZO-ySNtQodj-1qO59QenvY81xEnh_MepqtzK9nVrm5LQLXGnhMgR4'
             });
+
             console.log(JSON.stringify(push));
+            var data = JSON.stringify(push);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("post", "localhost:3000/SaveURL", true);
-            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-            xhr.send(JSON.stringify(push));
+            xhr.withCredentials = true;
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === 4) {
+                    console.log(this.responseText);
+                }
+            });
+            xhr.open("POST", "localhost:3000/SaveURL");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(data);
 
-            xhr.onloadend = function () {
-                // done
-            };
         }
 
     </script>
