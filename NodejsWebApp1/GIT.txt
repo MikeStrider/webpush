@@ -1,10 +1,11 @@
 git add .
-git commit -m "push 6"
+git commit -m "push 7"
 git pull origin new_branch
 git push origin new_branch
 
 
 cd C:\Program Files (x86)\Google\Chrome\Application
 chrome.exe --user-data-dir=c:\dir --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost/
+https://localhost/TestPages/Subscribe.html
 
 cd C:\Users\mstrong\Documents\Test Projects\NodejsWebApp1\NodejsWebApp1

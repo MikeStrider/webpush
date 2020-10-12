@@ -19,17 +19,16 @@
                 applicationServerKey: 'BOfFv9TlbYfetZ7Cd160G29UH6BUpkfweiZO-ySNtQodj-1qO59QenvY81xEnh_MepqtzK9nVrm5LQLXGnhMgR4'
             });
             console.log(JSON.stringify(push));
-            // store the push string in the DB attached to the user ID
 
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", "localhost:3000/SaveURL", true);
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            xhr.send(JSON.stringify(push));
+
+            xhr.onloadend = function () {
+                // done
+            };
         }
-
-        var fs = require('fs');
-
-        //create a file named mynewfile1.txt:
-        fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
-            if (err) throw err;
-            console.log('Saved!');
-        });
 
     </script>
 
