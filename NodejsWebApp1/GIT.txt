@@ -1,8 +1,12 @@
+// Push to web site
 git add .
-git commit -m "push 12"
-git pull origin new_branch
+git commit -m "push 13"
 git push origin new_branch
+-- not needed -- git pull origin new_branch
 
+
+// Push to node.js
+git pull origin new_branch
 
 cd C:\Program Files (x86)\Google\Chrome\Application
 chrome.exe --user-data-dir=c:\dir --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost/
